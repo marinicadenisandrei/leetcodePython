@@ -1,7 +1,11 @@
-nums = [2,7,11,15]
-target = 9
+nums = [[2,7,11,15],[3,2,4],[3,3]]
+target = [9,6,6]
 
-for i in range(len(nums)):
-    for j in range(1,len(nums)):
-        if nums[i] + nums[j] == target:
-            print(i,j)
+
+for lists,targets in zip(nums,target):
+    for i in range(len(lists)):
+        for j in range(1,len(lists)):
+            if lists[i] + lists[j] == targets:
+                print(i,j)
+    print("\n")
+
